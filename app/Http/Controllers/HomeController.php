@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        return view("layouts/blog/home", [
-            'articles' => Articles::inRandomOrder()->limit(3)->get()
+        return view("blog/home", [
+            'articles' => Articles::orderBy("id","DESC")->limit(3)->get()
         ]);
     }
 }

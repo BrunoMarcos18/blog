@@ -35,9 +35,12 @@
         <div class="card">
             <img src="https://alkasoft.com.br/wp-content/uploads/2017/09/imagem125_2-700x321.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5 class="card-title">{{$a->title}}</h5>
-            <p class="card-text">{{$a->preview}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">{{$a->title}}</h5>
+              <p class="card-text">{{substr($a->preview, 0, 100)}}(...)</p>
+            <div class="card-action">
+              <small>{{date("d/m/Y"), strtotime($a->date)}}</small>
+              <a href="/artigo/{{$a->id}}/{{Illuminate\Support\Str::slug($a->title)}}" class="btn btn-primary">LER AGORA</a>
+            </div>
             </div>
         </div>
     </div>
