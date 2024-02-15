@@ -3,7 +3,7 @@
 @section('content')
 <div class="row mt-4">
     <div class="col-12">
-        <h1><span class="badge bg-info">{{date("d/m/Y"), strtotime($a->date)}}</span>{{$article->title}}
+        <h1><span class="badge bg-info">{{date("d/m/Y"), strtotime($article->date)}}</span>{{$article->title}}
         </h1>
     </div>
 </div>
